@@ -3,79 +3,100 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>蒼雷オート | Sōrai Auto</title>
+<title>蒼雷オート | Premium Auction</title>
+
 <style>
 body {
 margin: 0;
 font-family: Arial, sans-serif;
-background-color: #0b1c2d;
-color: white;
+background: #f2f2f2;
 }
 
 header {
-background: linear-gradient(90deg, #001f3f, #005f9e);
-padding: 20px;
+background: linear-gradient(90deg,#3b008f,#6a00ff);
+color: white;
+padding: 25px;
 text-align: center;
 }
 
 header h1 {
 margin: 0;
-font-size: 36px;
-letter-spacing: 2px;
+font-size: 32px;
 }
 
-nav {
+.search-bar {
+text-align: center;
+padding: 20px;
+background: white;
+}
+
+.search-bar input {
+width: 60%;
+padding: 10px;
+font-size: 16px;
+}
+
+.categories {
 text-align: center;
 padding: 10px;
-background: #001427;
 }
 
-nav a {
+.categories button {
+padding: 8px 15px;
+margin: 5px;
+border: none;
+background: #6a00ff;
 color: white;
-margin: 0 15px;
-text-decoration: none;
-font-weight: bold;
+border-radius: 20px;
+cursor: pointer;
 }
 
-.hero {
-padding: 80px 20px;
-text-align: center;
-background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center/cover;
-}
-
-.hero h2 {
-font-size: 40px;
-margin-bottom: 10px;
-}
-
-.hero p {
-font-size: 18px;
-}
-
-.section {
-padding: 50px 20px;
-text-align: center;
-}
-
-.services {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+.container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 gap: 20px;
+padding: 20px;
 }
 
 .card {
-background: #112b45;
-padding: 20px;
-width: 250px;
+background: white;
 border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+overflow: hidden;
+}
+
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+}
+
+.card-content {
+padding: 15px;
+}
+
+.price {
+color: red;
+font-weight: bold;
+font-size: 18px;
+}
+
+.bid-btn {
+display: block;
+text-align: center;
+padding: 10px;
+margin-top: 10px;
+background: #ff0033;
+color: white;
+text-decoration: none;
+border-radius: 5px;
 }
 
 footer {
-background: #001427;
 text-align: center;
 padding: 20px;
-font-size: 14px;
+background: #3b008f;
+color: white;
 }
 </style>
 </head>
@@ -83,49 +104,54 @@ font-size: 14px;
 <body>
 
 <header>
-<h1>蒼雷オート</h1>
-<p>Blue Thunder Performance & Export</p>
+<h1>蒼雷オート Premium Auction</h1>
+<p>Japan Used Cars & Bikes Marketplace</p>
 </header>
 
-<nav>
-<a href="#">ホーム</a>
-<a href="#">在庫車両</a>
-<a href="#">サービス</a>
-<a href="#">お問い合わせ</a>
-</nav>
-
-<div class="hero">
-<h2>Power. Speed. Trust.</h2>
-<p>High Quality Used Cars & Export from Japan</p>
+<div class="search-bar">
+<input type="text" placeholder="Search vehicles...">
 </div>
 
-<section class="section">
-<h2>私たちのサービス</h2>
-<div class="services">
-<div class="card">
-<h3>中古車販売</h3>
-<p>Quality inspected vehicles</p>
+<div class="categories">
+<button>All</button>
+<button>Cars</button>
+<button>Bikes</button>
+<button>Luxury</button>
 </div>
-<div class="card">
-<h3>オークション代行</h3>
-<p>Japan auction vehicle sourcing</p>
-</div>
-<div class="card">
-<h3>海外輸出</h3>
-<p>Reliable global export service</p>
-</div>
-</div>
-</section>
 
-<section class="section">
-<h2>会社情報</h2>
-<p>所在地: 茨城県常総市</p>
-<p>Email: info@sorai-auto.jp</p>
-<p>Phone: 080-XXXX-XXXX</p>
-</section>
+<div class="container">
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250">
+<div class="card-content">
+<h3>Toyota Prius 2018</h3>
+<p class="price">¥850,000</p>
+<a href="https://wa.me/819012345678" class="bid-btn">Bid Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250">
+<div class="card-content">
+<h3>Nissan Skyline</h3>
+<p class="price">¥1,200,000</p>
+<a href="https://wa.me/819012345678" class="bid-btn">Bid Now</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/400x250">
+<div class="card-content">
+<h3>Honda CBR 600RR</h3>
+<p class="price">¥650,000</p>
+<a href="https://wa.me/819012345678" class="bid-btn">Bid Now</a>
+</div>
+</div>
+
+</div>
 
 <footer>
-© 2026 蒼雷オート | All Rights Reserved
+© 2026 蒼雷オート | Premium Japanese Vehicle Auction
 </footer>
 
 </body>
